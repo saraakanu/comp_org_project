@@ -58,3 +58,4 @@ fibonacci_loop:
 
     # Exit the program
     li $v0, 10        # System call for exit
+    syscall
