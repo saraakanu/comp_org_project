@@ -44,3 +44,11 @@ fibonacci_loop:
     add $t4, $t1, $t2 # Calculate the next Fibonacci number
     move $t1, $t2     # Move the second Fibonacci number to the first
     move $t2, $t4     # Move the next Fibonacci number to the second
+   
+    # Increment the counter
+    addi $t3, $t3, 1
+
+    # Check if we have printed N numbers (N = entered number)
+    bne $t3, $t0, fibonacci_loop # Loop if the counter is less than N
+
+    # Print a newline
