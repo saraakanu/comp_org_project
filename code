@@ -21,3 +21,8 @@ main:
     li $v0, 4         # System call for print_str
     la $a0, error_msg # Load the address of the error message
     syscall
+    j main            # Jump back to the beginning to prompt the user again
+
+input_valid:
+    # Initialize variables for Fibonacci sequence
+    li $t1, 0         # First Fibonacci number
