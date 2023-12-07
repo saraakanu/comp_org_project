@@ -38,3 +38,9 @@ fibonacci_loop:
     # Print a space
     li $v0, 4         # System call for print_str
     la $a0, " "       # Load the address of a space
+    syscall
+
+    # Calculate the next Fibonacci number
+    add $t4, $t1, $t2 # Calculate the next Fibonacci number
+    move $t1, $t2     # Move the second Fibonacci number to the first
+    move $t2, $t4     # Move the next Fibonacci number to the second
