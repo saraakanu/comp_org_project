@@ -32,3 +32,9 @@ input_valid:
 fibonacci_loop:
     # Print the current Fibonacci number
     li $v0, 1         # System call for print_int
+    move $a0, $t1     # Load the current Fibonacci number
+    syscall
+
+    # Print a space
+    li $v0, 4         # System call for print_str
+    la $a0, " "       # Load the address of a space
