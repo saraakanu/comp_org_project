@@ -26,3 +26,9 @@ main:
 input_valid:
     # Initialize variables for Fibonacci sequence
     li $t1, 0         # First Fibonacci number
+    li $t2, 1         # Second Fibonacci number
+    li $t3, 0         # Counter
+
+fibonacci_loop:
+    # Print the current Fibonacci number
+    li $v0, 1         # System call for print_int
