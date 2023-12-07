@@ -15,3 +15,9 @@ main:
     li $v0, 5         # System call for read_int
     syscall
     move $t0, $v0     # Save the entered number in $t0
+
+    # Check if the entered number is valid
+    bge $t0, 25, input_valid # Branch if the entered number is greater than or equal to 25
+    li $v0, 4         # System call for print_str
+    la $a0, error_msg # Load the address of the error message
+    syscall
