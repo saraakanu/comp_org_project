@@ -9,3 +9,9 @@ main:
     # Prompt the user for input
     li $v0, 4         # System call for print_str
     la $a0, prompt    # Load the address of the prompt string
+    syscall
+
+    # Get user input
+    li $v0, 5         # System call for read_int
+    syscall
+    move $t0, $v0     # Save the entered number in $t0
