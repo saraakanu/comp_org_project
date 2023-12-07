@@ -3,3 +3,9 @@ prompt:     .asciiz "Enter a positive integer greater than or equal to 25: "
 error_msg:  .asciiz "Invalid input. Please enter a valid number.\n"
 fib_msg:    .asciiz "Fibonacci sequence: "
 newline:    .asciiz "\n"
+
+.text
+main:
+    # Prompt the user for input
+    li $v0, 4         # System call for print_str
+    la $a0, prompt    # Load the address of the prompt string
